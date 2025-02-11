@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADMIN LOGIN</title>
+  <link rel="stylesheet" href="../assets/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../assets/vendors/jquery-bar-rating/css-stars.css" />
+  <link rel="stylesheet" href="../assets/vendors/font-awesome/css/font-awesome.min.css" />
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="../assets/css/demo_2/style.css" />
+  <!-- End layout styles -->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+
+</head>
+<body>
+  <!-- nav bar -->
+  <nav class="navbar navbar-expand-lg " style="background-color: blue;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <div class="d-flex align-items-center">
+          <img src="../assets/android-chrome-192x192.png" alt="logo"  style="height: 50px; width: 55px;  border-radius: 10px; " />
+          <h3 class="text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: aliceblue; padding-left: 10px;">JAIE FOUNDATION</h3>
+        </div>
+        <span class="font-12 d-block font-weight-light" style="color: aliceblue;">Welcome To Admin Login </span>
+      </a>
+    </div>
+  </nav>
+  
+
+
+  <!-- main contant -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+  data-sidebar-position="fixed" data-header-position="fixed">
+  <div
+    class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="d-flex align-items-center justify-content-center w-100">
+      <div class="row justify-content-center w-100">
+        <div class="col-md-8 col-lg-6 col-xxl-3">
+          <div class="card mb-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <img src="/assets/images/loginimage.png" alt="" style="height: fit-content; width: fit-content; " class="text-center">
+
+                </div>
+                <div class="col">
+                  <a href="/admin/" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                    <!-- logo -->
+                    <img src="../../assets/images/image.png" alt="" style="height: 50px; border-radius: 100%;">
+                  </a>
+                  <p class="text-center">Your Social Campaigns</p>
+                  <form action="/auth/login" method="POST">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Username</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                    </div>
+                    <div class="mb-4">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="form-check">
+                        <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label text-dark" for="flexCheckChecked">
+                          Remeber this Device
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-7 fs-4">Sign In</button>
+                    <div class="d-flex align-items-center justify-content-center">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- partial:partials/_footer.html -->
+ <footer class="footer bg-dark py-3">
+  <div class="container text-center" style="color: white; font-weight: bold;">
+    <span class="text-muted">Copyright © <a href="https://www.digitalstart.in/" style=" color: aqua; text-decoration: none; font-weight: bold;">Digital Start 2025</a> All rights reserved.</span>
+  </div>
+</footer>
+  
+</body>
+</html>
