@@ -131,18 +131,39 @@
                             <input type="date" class="form-control" id="inputValidityEnd" placeholder="End Validity" name="ValidityEnd">
                           </div>
                           <div class="form-group col-md-4">
-                            <label for="inputPhoto">Photo:</label>
-                            <input type="file" class="form-control" id="inputPhoto" data-toggle="tooltip" data-placement="right" title="Photo Must be 200 KB Or Less" name="photo">
+                            <label for="imageInput">Select an image (Max 200 KB):</label>
+                             <input type="file" class="form-control-file" id="imageInput" name="photo">
+
                           </div>
+                          <small id="errorMessage" class="text-muted" style="display: none; color: red;">Photo must be 200 KB or less.</small>
                         </div>
                        
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
+                <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Photo must be 200 KB or less. Please select a smaller image.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+                      </div>
+                    </div>
+                  </div>
+              
             </div>
 
             <!-- end contant  -->
             
+          </div>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
@@ -159,7 +180,24 @@
       <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
+    <!-- <script>
+      document.getElementById('imageInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const maxSize = 200 * 1024; // 200 KB in bytes
+  
+        if (file && file.size > maxSize) {
+          document.getElementById('errorMessage').style.display = "block";
+          event.target.value = ""; // Clear the input
+        } else {
+          document.getElementById('errorMessage').style.display = "none";
+        }
+      });
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  
     <!-- plugins:js -->
+
     <script src="/assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
@@ -180,6 +218,20 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script src="/assets/js/dashboard.js"></script>
+    <script>
+      document.getElementById('imageInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const maxSize = 200 * 1024; // 200 KB in bytes
+  
+        if (file && file.size > maxSize) {
+          $('#errorModal').modal('show'); // Show the Bootstrap modal
+          event.target.value = ""; // Clear the input
+        }
+      });
+    </script>
+  
+  
+
     <!-- End custom js for this page -->
   </body>
 </html>
